@@ -17,6 +17,7 @@ namespace restworkapi.Connectors
         public IMongoCollection<Job> jobCollection;
         public IMongoCollection<CV> cvCollection;
         public IMongoCollection<Category> categoryCollection;
+        public IMongoCollection<User> userCollection;
 
         public async Task<List<T>> GetAll<T>(IMongoCollection<T> collection)
         {
@@ -105,6 +106,7 @@ namespace restworkapi.Connectors
             jobCollection = Db.GetCollection<Job>("Jobs");
             cvCollection = Db.GetCollection<CV>("CV");
             categoryCollection = Db.GetCollection<Category>("Categories");
+            userCollection = Db.GetCollection<User>("Users");
         }
 
         private static DatabaseConnector databaseConnector;

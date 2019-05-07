@@ -16,8 +16,8 @@ namespace restworkapi.Controllers
         {
             var output = new List<string>();
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
-            var categories = await databaseConnector.GetAll(databaseConnector.cvCollection);
-            categories.ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
+            var cvs = await databaseConnector.GetAll(databaseConnector.cvCollection);
+            cvs.ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
             return output;
         }
 
@@ -51,7 +51,11 @@ namespace restworkapi.Controllers
                     Languages = data["Languages"],
                     Photo = data["Photo"],
                     Skills = data["Skills"],
-                    Version = int.Parse(data["Version"])
+                    Version = int.Parse(data["Version"]),
+                    Email = data["Email"],
+                    Phone = data["Phone"],
+                    Position = data["Position"],
+                    Salary = int.Parse(data["Salary"])
                 }, databaseConnector.cvCollection);
             }
             catch
@@ -68,9 +72,9 @@ namespace restworkapi.Controllers
             {
                 IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value);
                 var databaseConnector = DatabaseConnector.GetDatabaseConnector();
-                var item = databaseConnector.GetItemById(int.Parse(data["_id"]), databaseConnector.cvCollection);
-                await databaseConnector.InsertNewValue(new CV()
+                await databaseConnector.ModifyValue(new CV()
                 {
+                    Id = int.Parse(data["_id"]),
                     Attachment = data["Attachment"],
                     Category = data["Category"],
                     Courses = data["Courses"],
@@ -80,7 +84,11 @@ namespace restworkapi.Controllers
                     Languages = data["Languages"],
                     Photo = data["Photo"],
                     Skills = data["Skills"],
-                    Version = int.Parse(data["Version"])
+                    Version = int.Parse(data["Version"]),
+                    Email = data["Email"],
+                    Phone = data["Phone"],
+                    Position = data["Position"],
+                    Salary = int.Parse(data["Salary"])
                 }, databaseConnector.cvCollection);
             }
             catch

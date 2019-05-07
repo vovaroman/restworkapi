@@ -1,24 +1,30 @@
 ﻿<Properties StartupConfiguration="{D0653F7B-A795-471B-AF8C-54F6607AE22C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="restworkapi/Controllers/CvByCategoryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="restworkapi/WebSpider/WSpider.cs">
     <Files>
-      <File FileName="restworkapi/Models/Database/Category.cs" Line="6" Column="20" />
-      <File FileName="restworkapi/Connectors/DatabaseConnector.cs" Line="76" Column="89" />
-      <File FileName="restworkapi/Controllers/ValuesController.cs" Line="21" Column="26" />
+      <File FileName="restworkapi/Controllers/CVController.cs" Line="91" Column="55" />
+      <File FileName="restworkapi/WebSpider/WSpider.cs" Line="57" Column="14" />
+      <File FileName="restworkapi/WebSpider/Sol.cs" Line="6" Column="44" />
+      <File FileName="restworkapi/Connectors/DatabaseConnector.cs" Line="109" Column="62" />
+      <File FileName="restworkapi/Models/Database/User.cs" Line="8" Column="40" />
+      <File FileName="restworkapi/Models/Database/Job.cs" Line="10" Column="45" />
+      <File FileName="restworkapi/Controllers/UserController.cs" Line="46" Column="57" />
+      <File FileName="restworkapi/Controllers/JobController.cs" Line="91" Column="44" />
+      <File FileName="restworkapi/Models/Database/CV.cs" Line="13" Column="27" />
+      <File FileName="restworkapi/Controllers/JobByCategory.cs" Line="12" Column="2" />
       <File FileName="restworkapi/Controllers/CategoryController.cs" Line="25" Column="1" />
-      <File FileName="restworkapi/Program.cs" Line="43" Column="20" />
-      <File FileName="restworkapi/Controllers/CVController.cs" Line="61" Column="13" />
-      <File FileName="restworkapi/Controllers/JobController.cs" Line="21" Column="10" />
-      <File FileName="restworkapi/Controllers/JobByCategory.cs" Line="29" Column="1" />
-      <File FileName="restworkapi/Controllers/CvByCategoryController.cs" Line="22" Column="80" />
-      <File FileName="restworkapi/Models/Database/CollectionTypes.cs" Line="5" Column="31" />
-      <File FileName="restworkapi/Models/Database/IDatabaseObject.cs" Line="5" Column="6" />
-      <File FileName="restworkapi/Models/Database/CV.cs" Line="8" Column="37" />
-      <File FileName="restworkapi/Models/Database/Job.cs" Line="19" Column="14" />
+      <File FileName="restworkapi/Controllers/CvByCategoryController.cs" Line="22" Column="108" />
+      <File FileName="restworkapi/Program.cs" Line="63" Column="1" />
+      <File FileName="Source Not Available" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/vr/Desktop/coursework/backend/restworkapi/Program.cs" relfile="restworkapi/Program.cs" line="56" column="19" />
+      <Breakpoint file="/Users/vr/Desktop/coursework/backend/restworkapi/WebSpider/WSpider.cs" relfile="restworkapi/WebSpider/WSpider.cs" line="61" column="1" />
+      <Breakpoint file="/Users/vr/Desktop/coursework/backend/restworkapi/WebSpider/WSpider.cs" relfile="restworkapi/WebSpider/WSpider.cs" line="64" column="1" />
+      <Breakpoint file="/Users/vr/Desktop/coursework/backend/restworkapi/WebSpider/WSpider.cs" relfile="restworkapi/WebSpider/WSpider.cs" line="60" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.restworkapi PreferredExecutionTarget="MonoDevelop.Default" />

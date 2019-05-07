@@ -20,6 +20,7 @@ namespace restworkapi.Controllers
             return output;
         }
 
+
         [HttpGet("{id}")]
         public async Task<string> Get(int id)
         {
@@ -52,7 +53,9 @@ namespace restworkapi.Controllers
                     Salary = data["Salary"],
                     Schedule = data["Schedule"],
                     Title = data["Title"],
-                    Version = int.Parse(data["Version"])
+                    Version = int.Parse(data["Version"]),
+                    Photo = data["Photo"],
+                    Skills = data["Skills"]
                 }, databaseConnector.jobCollection);
             }
             catch
@@ -83,7 +86,9 @@ namespace restworkapi.Controllers
                     Salary = data["Salary"],
                     Schedule = data["Schedule"],
                     Title = data["Title"],
-                    Version = int.Parse(data["Version"])
+                    Version = int.Parse(data["Version"]),
+                    Photo = data["Photo"],
+                    Skills = data["Skills"]
                 }, databaseConnector.jobCollection);
             }
             catch

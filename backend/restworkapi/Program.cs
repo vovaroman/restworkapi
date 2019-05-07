@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using restworkapi.Models.Database;
+using restworkapi.WebSpider;
 
 namespace restworkapi
 {
@@ -46,8 +47,13 @@ namespace restworkapi
             //List<CV> cvs = await connector.GetAll<CV>();
             //var tempjob = await connector.GetItemById<Job>(0) as Job;
             //var tempjob1 = await connector.GetItemById<Job>(1) as Job;
-            await connector.InsertNewValue(category, connector.categoryCollection);
-            await connector.InsertNewValue(category2, connector.categoryCollection);
+            //await connector.InsertNewValue(category, connector.categoryCollection);
+            //await connector.InsertNewValue(ategory2, connector.categoryCollection);
+            WebSpiderBuilder webSpiderBuilder = new BuildWebSpiderRabotamd();
+            webSpiderBuilder.BuildFields();
+            webSpiderBuilder.BuildLink();
+            var spider = webSpiderBuilder.GetWSpider();
+            await spider.Invoke();
 
             return true;
         }

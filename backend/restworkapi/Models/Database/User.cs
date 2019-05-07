@@ -1,7 +1,7 @@
 ﻿using System;
 namespace restworkapi.Models.Database
 {
-    public class Category : IDatabaseObject
+    public class User : IDatabaseObject
     {
         public int Id { get; set; }
         public string Name { get; set; }
