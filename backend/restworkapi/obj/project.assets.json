@@ -2,6 +2,55 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "AngleSharp/0.12.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.dll": {}
+        }
+      },
+      "AngleSharp.Css/0.12.0": {
+        "type": "package",
+        "dependencies": {
+          "AngleSharp": "0.12.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.Css.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.Css.dll": {}
+        }
+      },
+      "AngleSharp.Scripting.JavaScript/0.5.1": {
+        "type": "package",
+        "dependencies": {
+          "AngleSharp": "0.9.9",
+          "Jint": "2.10.4"
+        },
+        "compile": {
+          "lib/portable-windows8+net45+windowsphone8+wpa+monoandroid+monotouch/AngleSharp.Scripting.JavaScript.dll": {}
+        },
+        "runtime": {
+          "lib/portable-windows8+net45+windowsphone8+wpa+monoandroid+monotouch/AngleSharp.Scripting.JavaScript.dll": {}
+        }
+      },
+      "AngleSharp.XPath/1.1.3": {
+        "type": "package",
+        "dependencies": {
+          "AngleSharp": "0.12.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.XPath.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.XPath.dll": {}
+        }
+      },
       "DnsClient/1.2.0": {
         "type": "package",
         "dependencies": {
@@ -13,6 +62,32 @@
         "runtime": {
           "lib/netstandard2.0/DnsClient.dll": {}
         }
+      },
+      "Fizzler/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Fizzler.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Fizzler.dll": {}
+        }
+      },
+      "Fizzler.Systems.HtmlAgilityPack/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Fizzler": "1.2.0",
+          "HtmlAgilityPack": "1.5.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Fizzler.Systems.HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Fizzler.Systems.HtmlAgilityPack.dll": {}
+        }
+      },
+      "Fizzler.Tools/1.1.0": {
+        "type": "package"
       },
       "HtmlAgilityPack/1.11.4": {
         "type": "package",
@@ -27,6 +102,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "jint/2.10.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reflection.TypeExtensions": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/jint.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/jint.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -4103,13 +4193,13 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Runtime.Extensions/4.3.0": {
@@ -4594,13 +4684,14 @@
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
         }
       },
-      "System.Text.Encoding.CodePages/4.4.0": {
+      "System.Text.Encoding.CodePages/4.5.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0"
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -4919,6 +5010,60 @@
     }
   },
   "libraries": {
+    "AngleSharp/0.12.0": {
+      "sha512": "0TGoFVYu5ElKfaBecaWZkB4jHlgyfmtuhVEOCV0iC77k1nRnKtCsW+v81ytd2Sof1xqwNB2WJJ6a8iSrP1BFKg==",
+      "type": "package",
+      "path": "anglesharp/0.12.0",
+      "files": [
+        ".signature.p7s",
+        "anglesharp.0.12.0.nupkg.sha512",
+        "anglesharp.nuspec",
+        "lib/net46/AngleSharp.dll",
+        "lib/net46/AngleSharp.xml",
+        "lib/netstandard1.3/AngleSharp.dll",
+        "lib/netstandard1.3/AngleSharp.xml",
+        "lib/netstandard2.0/AngleSharp.dll",
+        "lib/netstandard2.0/AngleSharp.xml"
+      ]
+    },
+    "AngleSharp.Css/0.12.0": {
+      "sha512": "Smgl6yZWOTdp4S9a8LZV1tq8uvWipiVlPVcsdhWQNWU2jZyNmTvg8xBA9Kogs6XPhnhtaG9GZAHD38z2DH7ldA==",
+      "type": "package",
+      "path": "anglesharp.css/0.12.0",
+      "files": [
+        ".signature.p7s",
+        "anglesharp.css.0.12.0.nupkg.sha512",
+        "anglesharp.css.nuspec",
+        "lib/net46/AngleSharp.Css.dll",
+        "lib/net46/AngleSharp.Css.xml",
+        "lib/netstandard2.0/AngleSharp.Css.dll",
+        "lib/netstandard2.0/AngleSharp.Css.xml"
+      ]
+    },
+    "AngleSharp.Scripting.JavaScript/0.5.1": {
+      "sha512": "ohYF36uOv0mJFJIKg8dSQjSia9c/eu55RPokTiVe9tVrJemLGMqJhOfKrubrgQwqMYc23iIlZTQwoC/Me9tEsw==",
+      "type": "package",
+      "path": "anglesharp.scripting.javascript/0.5.1",
+      "files": [
+        ".signature.p7s",
+        "anglesharp.scripting.javascript.0.5.1.nupkg.sha512",
+        "anglesharp.scripting.javascript.nuspec",
+        "lib/portable-windows8+net45+windowsphone8+wpa+monoandroid+monotouch/AngleSharp.Scripting.JavaScript.dll",
+        "lib/portable-windows8+net45+windowsphone8+wpa+monoandroid+monotouch/AngleSharp.Scripting.JavaScript.xml"
+      ]
+    },
+    "AngleSharp.XPath/1.1.3": {
+      "sha512": "e9HXLTIod+EFsyJGs7iNVGzm+jzOlfFteFuEV1pf/6b4J3fytuccXpS1poxl4Af5lEObFpWaWsol0jWoLqs9KQ==",
+      "type": "package",
+      "path": "anglesharp.xpath/1.1.3",
+      "files": [
+        ".signature.p7s",
+        "anglesharp.xpath.1.1.3.nupkg.sha512",
+        "anglesharp.xpath.nuspec",
+        "lib/netstandard2.0/AngleSharp.XPath.dll",
+        "lib/netstandard2.0/AngleSharp.XPath.xml"
+      ]
+    },
     "DnsClient/1.2.0": {
       "sha512": "UT54vUwsoDR7PP/tD195TVBQArpmFKi/Wo58b7noG24hVVyz2nraN22i+RNA6D0jkhQM3wQjL/IvGzsjKpRhJA==",
       "type": "package",
@@ -4935,6 +5080,57 @@
         "lib/netstandard1.3/DnsClient.xml",
         "lib/netstandard2.0/DnsClient.dll",
         "lib/netstandard2.0/DnsClient.xml"
+      ]
+    },
+    "Fizzler/1.2.0": {
+      "sha512": "dWH0kEROGVzzBrLoFBuOH5lldB1KogMhZHeM3iKTi/FOFePSWxZKntWL9xSk3ATdG5xOgghTr664dkhZok/d9A==",
+      "type": "package",
+      "path": "fizzler/1.2.0",
+      "files": [
+        ".signature.p7s",
+        "COPYING.LESSER.txt",
+        "COPYING.txt",
+        "fizzler.1.2.0.nupkg.sha512",
+        "fizzler.nuspec",
+        "lib/netstandard1.0/Fizzler.dll",
+        "lib/netstandard2.0/Fizzler.dll"
+      ]
+    },
+    "Fizzler.Systems.HtmlAgilityPack/1.2.0": {
+      "sha512": "IkyDSaGm15jtnjYWQMrbRlJpmIh0LsmKj9dHgOI+AgASuUMhQ768MfFkc4mkEtDJWOuXQ8nba9dZunRWJUJzeA==",
+      "type": "package",
+      "path": "fizzler.systems.htmlagilitypack/1.2.0",
+      "files": [
+        ".signature.p7s",
+        "COPYING.LESSER.txt",
+        "COPYING.txt",
+        "fizzler.systems.htmlagilitypack.1.2.0.nupkg.sha512",
+        "fizzler.systems.htmlagilitypack.nuspec",
+        "lib/netstandard1.3/Fizzler.Systems.HtmlAgilityPack.dll"
+      ]
+    },
+    "Fizzler.Tools/1.1.0": {
+      "sha512": "XWoQS8euEO8s6a24j1fEli5wGXFLhtVCN5yj3qf24z74tSf7D/RlDCWg4CrbcBTm8jprAqw0Rhl0BKwVVCCWKA==",
+      "type": "package",
+      "path": "fizzler.tools/1.1.0",
+      "files": [
+        ".signature.p7s",
+        "COPYING.LESSER.txt",
+        "COPYING.txt",
+        "fizzler.tools.1.1.0.nupkg.sha512",
+        "fizzler.tools.nuspec",
+        "tools/Fizzler.Systems.HtmlAgilityPack.dll",
+        "tools/Fizzler.Systems.HtmlAgilityPack.pdb",
+        "tools/Fizzler.dll",
+        "tools/Fizzler.pdb",
+        "tools/HtmlAgilityPack.dll",
+        "tools/HtmlAgilityPack.pdb",
+        "tools/Mannex.dll",
+        "tools/VisualFizzler.exe",
+        "tools/VisualFizzler.pdb",
+        "tools/fizz.exe",
+        "tools/fizz.exe.config",
+        "tools/fizz.pdb"
       ]
     },
     "HtmlAgilityPack/1.11.4": {
@@ -4985,6 +5181,19 @@
         "lib/uap10.0/HtmlAgilityPack.dll",
         "lib/uap10.0/HtmlAgilityPack.pdb",
         "lib/uap10.0/HtmlAgilityPack.pri"
+      ]
+    },
+    "jint/2.10.4": {
+      "sha512": "OYNGKRRc0wHqQ9u1+HJ4sp4diezmEzY5O/vA1oFDhKCkctrJIcwnnYqvSwR4xaSapT3IUKG+H3FaRTeOzdW2Pw==",
+      "type": "package",
+      "path": "jint/2.10.4",
+      "files": [
+        ".signature.p7s",
+        "jint.2.10.4.nupkg.sha512",
+        "jint.nuspec",
+        "lib/net45/jint.dll",
+        "lib/netstandard1.3/jint.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/jint.dll"
       ]
     },
     "Libuv/1.10.0": {
@@ -10985,22 +11194,27 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
-      "sha512": "9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "sha512": "kUM0JPMHfdteeGm/r9/tdlsddPV1PUkAzcgUtcU7LXn5ZYKoXUyrPp9OarBCy3JRS5nk7Btwd+XMMEqhSzruNA==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.4.0",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/uap10.0.16300/_._",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512",
+        "ref/uap10.0.16300/_._",
+        "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12026,11 +12240,12 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/4.4.0": {
-      "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
+    "System.Text.Encoding.CodePages/4.5.0": {
+      "sha512": "aQnlUgT+JK/81iv62zE7hR7FZJOgKbMNuxlK5l6u3CchtZ2FG5LIMnedmvVgT1phTnX4qWCUIoyfGTQlxrLNog==",
       "type": "package",
-      "path": "system.text.encoding.codepages/4.4.0",
+      "path": "system.text.encoding.codepages/4.5.0",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -12066,7 +12281,7 @@
         "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "system.text.encoding.codepages.4.4.0.nupkg.sha512",
+        "system.text.encoding.codepages.4.5.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -13007,6 +13222,13 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "AngleSharp >= 0.12.0",
+      "AngleSharp.Css >= 0.12.0",
+      "AngleSharp.Scripting.JavaScript >= 0.5.1",
+      "AngleSharp.XPath >= 1.1.3",
+      "Fizzler >= 1.2.0",
+      "Fizzler.Systems.HtmlAgilityPack >= 1.2.0",
+      "Fizzler.Tools >= 1.1.0",
       "HtmlAgilityPack >= 1.11.4",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
@@ -13074,6 +13296,34 @@
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "1.11.4"
+          },
+          "Fizzler": {
+            "target": "Package",
+            "version": "1.2.0"
+          },
+          "Fizzler.Tools": {
+            "target": "Package",
+            "version": "1.1.0"
+          },
+          "Fizzler.Systems.HtmlAgilityPack": {
+            "target": "Package",
+            "version": "1.2.0"
+          },
+          "AngleSharp": {
+            "target": "Package",
+            "version": "0.12.0"
+          },
+          "AngleSharp.Css": {
+            "target": "Package",
+            "version": "0.12.0"
+          },
+          "AngleSharp.Scripting.JavaScript": {
+            "target": "Package",
+            "version": "0.5.1"
+          },
+          "AngleSharp.XPath": {
+            "target": "Package",
+            "version": "1.1.3"
           }
         },
         "imports": [
@@ -13083,5 +13333,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AngleSharp.Scripting.JavaScript 0.5.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AngleSharp.Scripting.JavaScript",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

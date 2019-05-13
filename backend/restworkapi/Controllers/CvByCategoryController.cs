@@ -13,6 +13,7 @@ namespace restworkapi.Controllers
     [Route("api/[controller]")]
     public class CvByCategoryController : Controller
     {
+
         [HttpGet("{category}")]
         public async Task<IEnumerable<string>> Get(string category)
         {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using HtmlAgilityPack;
+using AngleSharp;
 using System.Net;
+using System.Linq;
+using restworkapi.WebSpider.Models;
 
 namespace restworkapi.WebSpider
 {
@@ -46,34 +48,42 @@ namespace restworkapi.WebSpider
      * 
      * 
      */
+
     public class WSpider
     {
         public string linkToParse;
         public Dictionary<string, string> fields;
         public string htmlCode;
 
-        public async Task<bool> Invoke()
+        public async Task<List<Category>> GetCategory()
         {
+            var categoryList = new List<Category>();
             try
             {
-                    HtmlWeb w = new HtmlWeb();
-                    var htmldoc = await w.LoadFromWebAsync(this.linkToParse);
-                    HtmlNode mainNode = htmldoc.DocumentNode.SelectNodes($"//div[@class='{fields["BaseClass"]}']")[0];
-                    foreach (HtmlNode col in mainNode.ChildNodes)
+                var config = Configuration.Default.WithDefaultLoader();
+                var document = await BrowsingContext.New(config).OpenAsync(Sol.RMDVacancyLink);
+                var maindoc = document.QuerySelector("div.b_info12");
+                var columns = maindoc.QuerySelectorAll("div.col");
+                foreach(var col in columns)
+                {
+                    var ul = col.QuerySelector("ul");
+                    var lis = ul.QuerySelectorAll("li");
+                    foreach(var li in lis)
                     {
-                        Console.WriteLine(col);
+                        var a = li.QuerySelector("a");
+                        categoryList.Add(
+                            new Category()
+                            {
+                                Link = a.GetAttribute("href"),
+                                Name = a.TextContent.Trim()
+                             
+                            });
                     }
-                    //foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//span[@class='" + ClassToGet + "']"))
-                    //{
-                    //    string value = node.InnerText;
-                    //    // etc...
-                    //}
+                }
+
             }
-            catch (Exception ex) { return false; }
-
-
-
-            return true;
+            catch (Exception) { return categoryList; }
+            return categoryList;
         }
 
     }

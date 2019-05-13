@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "e79eaa0e9bf9547bd4496690e26a9c31fd6aca4f"
+    "signature": "bb1d8cc269c9bc89d4deb165b5008c3c1b84f97b"
   },
   "compilationOptions": {
     "defines": [
@@ -23,6 +23,13 @@
     ".NETCoreApp,Version=v2.0": {
       "restworkapi/1.0.0": {
         "dependencies": {
+          "AngleSharp": "0.12.0",
+          "AngleSharp.Css": "0.12.0",
+          "AngleSharp.Scripting.JavaScript": "0.5.1",
+          "AngleSharp.XPath": "1.1.3",
+          "Fizzler": "1.2.0",
+          "Fizzler.Systems.HtmlAgilityPack": "1.2.0",
+          "Fizzler.Tools": "1.1.0",
           "HtmlAgilityPack": "1.11.4",
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
@@ -36,6 +43,51 @@
           "restworkapi.dll": {}
         }
       },
+      "AngleSharp/0.12.0": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.dll": {}
+        }
+      },
+      "AngleSharp.Css/0.12.0": {
+        "dependencies": {
+          "AngleSharp": "0.12.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.Css.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.Css.dll": {}
+        }
+      },
+      "AngleSharp.Scripting.JavaScript/0.5.1": {
+        "dependencies": {
+          "AngleSharp": "0.12.0",
+          "jint": "2.10.4"
+        },
+        "runtime": {
+          "lib/portable-windows8+net45+windowsphone8+wpa+monoandroid+monotouch/AngleSharp.Scripting.JavaScript.dll": {}
+        },
+        "compile": {
+          "lib/portable-windows8+net45+windowsphone8+wpa+monoandroid+monotouch/AngleSharp.Scripting.JavaScript.dll": {}
+        }
+      },
+      "AngleSharp.XPath/1.1.3": {
+        "dependencies": {
+          "AngleSharp": "0.12.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.XPath.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.XPath.dll": {}
+        }
+      },
       "DnsClient/1.2.0": {
         "dependencies": {
           "System.Buffers": "4.4.0"
@@ -47,6 +99,28 @@
           "lib/netstandard2.0/DnsClient.dll": {}
         }
       },
+      "Fizzler/1.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Fizzler.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/Fizzler.dll": {}
+        }
+      },
+      "Fizzler.Systems.HtmlAgilityPack/1.2.0": {
+        "dependencies": {
+          "Fizzler": "1.2.0",
+          "HtmlAgilityPack": "1.11.4",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Fizzler.Systems.HtmlAgilityPack.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Fizzler.Systems.HtmlAgilityPack.dll": {}
+        }
+      },
+      "Fizzler.Tools/1.1.0": {},
       "HtmlAgilityPack/1.11.4": {
         "dependencies": {
           "System.Net.Http": "4.3.2",
@@ -59,6 +133,20 @@
         },
         "compile": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "jint/2.10.4": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "System.Diagnostics.Contracts": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/jint.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/jint.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -1442,7 +1530,7 @@
           "System.Security.Cryptography.Encoding": "4.3.0",
           "System.Security.Cryptography.X509Certificates": "4.3.0",
           "System.Text.Encoding": "4.3.0",
-          "System.Text.Encoding.CodePages": "4.4.0",
+          "System.Text.Encoding.CodePages": "4.5.0",
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
@@ -2165,7 +2253,7 @@
       },
       "Microsoft.Extensions.Primitives/2.0.0": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
@@ -2796,7 +2884,7 @@
         "dependencies": {
           "Microsoft.Win32.Registry": "4.4.0",
           "System.Security.Principal.Windows": "4.4.0",
-          "System.Text.Encoding.CodePages": "4.4.0",
+          "System.Text.Encoding.CodePages": "4.5.0",
           "runtime.native.System.Data.SqlClient.sni": "4.4.0"
         },
         "runtime": {
@@ -3354,9 +3442,9 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -3738,9 +3826,10 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Text.Encoding.CodePages/4.4.0": {
+      "System.Text.Encoding.CodePages/4.5.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0"
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -3750,6 +3839,9 @@
             "rid": "win",
             "assetType": "runtime"
           }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Text.Encoding.Extensions/4.3.0": {
@@ -4132,6 +4224,34 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AngleSharp/0.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0TGoFVYu5ElKfaBecaWZkB4jHlgyfmtuhVEOCV0iC77k1nRnKtCsW+v81ytd2Sof1xqwNB2WJJ6a8iSrP1BFKg==",
+      "path": "anglesharp/0.12.0",
+      "hashPath": "anglesharp.0.12.0.nupkg.sha512"
+    },
+    "AngleSharp.Css/0.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Smgl6yZWOTdp4S9a8LZV1tq8uvWipiVlPVcsdhWQNWU2jZyNmTvg8xBA9Kogs6XPhnhtaG9GZAHD38z2DH7ldA==",
+      "path": "anglesharp.css/0.12.0",
+      "hashPath": "anglesharp.css.0.12.0.nupkg.sha512"
+    },
+    "AngleSharp.Scripting.JavaScript/0.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ohYF36uOv0mJFJIKg8dSQjSia9c/eu55RPokTiVe9tVrJemLGMqJhOfKrubrgQwqMYc23iIlZTQwoC/Me9tEsw==",
+      "path": "anglesharp.scripting.javascript/0.5.1",
+      "hashPath": "anglesharp.scripting.javascript.0.5.1.nupkg.sha512"
+    },
+    "AngleSharp.XPath/1.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e9HXLTIod+EFsyJGs7iNVGzm+jzOlfFteFuEV1pf/6b4J3fytuccXpS1poxl4Af5lEObFpWaWsol0jWoLqs9KQ==",
+      "path": "anglesharp.xpath/1.1.3",
+      "hashPath": "anglesharp.xpath.1.1.3.nupkg.sha512"
+    },
     "DnsClient/1.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4139,12 +4259,40 @@
       "path": "dnsclient/1.2.0",
       "hashPath": "dnsclient.1.2.0.nupkg.sha512"
     },
+    "Fizzler/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dWH0kEROGVzzBrLoFBuOH5lldB1KogMhZHeM3iKTi/FOFePSWxZKntWL9xSk3ATdG5xOgghTr664dkhZok/d9A==",
+      "path": "fizzler/1.2.0",
+      "hashPath": "fizzler.1.2.0.nupkg.sha512"
+    },
+    "Fizzler.Systems.HtmlAgilityPack/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IkyDSaGm15jtnjYWQMrbRlJpmIh0LsmKj9dHgOI+AgASuUMhQ768MfFkc4mkEtDJWOuXQ8nba9dZunRWJUJzeA==",
+      "path": "fizzler.systems.htmlagilitypack/1.2.0",
+      "hashPath": "fizzler.systems.htmlagilitypack.1.2.0.nupkg.sha512"
+    },
+    "Fizzler.Tools/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XWoQS8euEO8s6a24j1fEli5wGXFLhtVCN5yj3qf24z74tSf7D/RlDCWg4CrbcBTm8jprAqw0Rhl0BKwVVCCWKA==",
+      "path": "fizzler.tools/1.1.0",
+      "hashPath": "fizzler.tools.1.1.0.nupkg.sha512"
+    },
     "HtmlAgilityPack/1.11.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-OGEi48/KQCbHnM2fTj1oW2eQIwXcYnI9Zy39fEJPQLYHXN19iwDdVpKYdBDyZNVSvhl/Bi0kXXotYbqipnTTMA==",
       "path": "htmlagilitypack/1.11.4",
       "hashPath": "htmlagilitypack.1.11.4.nupkg.sha512"
+    },
+    "jint/2.10.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OYNGKRRc0wHqQ9u1+HJ4sp4diezmEzY5O/vA1oFDhKCkctrJIcwnnYqvSwR4xaSapT3IUKG+H3FaRTeOzdW2Pw==",
+      "path": "jint/2.10.4",
+      "hashPath": "jint.2.10.4.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
@@ -5896,12 +6044,12 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
-      "path": "system.runtime.compilerservices.unsafe/4.4.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+      "sha512": "sha512-kUM0JPMHfdteeGm/r9/tdlsddPV1PUkAzcgUtcU7LXn5ZYKoXUyrPp9OarBCy3JRS5nk7Btwd+XMMEqhSzruNA==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
@@ -6057,12 +6205,12 @@
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
     },
-    "System.Text.Encoding.CodePages/4.4.0": {
+    "System.Text.Encoding.CodePages/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
-      "path": "system.text.encoding.codepages/4.4.0",
-      "hashPath": "system.text.encoding.codepages.4.4.0.nupkg.sha512"
+      "sha512": "sha512-aQnlUgT+JK/81iv62zE7hR7FZJOgKbMNuxlK5l6u3CchtZ2FG5LIMnedmvVgT1phTnX4qWCUIoyfGTQlxrLNog==",
+      "path": "system.text.encoding.codepages/4.5.0",
+      "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
     },
     "System.Text.Encoding.Extensions/4.3.0": {
       "type": "package",
