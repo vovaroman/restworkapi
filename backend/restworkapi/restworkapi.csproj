@@ -37,5 +37,12 @@
     <Compile Remove="Models\Database\ICollection.cs" />
     <Compile Remove="Models\Database\Collection.cs" />
     <Compile Remove="Models\Database\ICollection.cs" />
+    <Compile Remove="AFactoryTask\PopulateVacancy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="AFactoryTask\PopulateVacancy.CS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AFactoryTask\PopulateVacancy.cs" />
   </ItemGroup>
 </Project>

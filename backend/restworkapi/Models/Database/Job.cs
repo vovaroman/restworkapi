@@ -5,7 +5,8 @@ namespace restworkapi.Models.Database
     public class Job : IDatabaseObject
     {
         public int Id { get; set; }
-        public string Title { get; set; } // position?
+        public string Position { get; set; } // position?
+        public string Company { get; set; }
         public string Description { get; set; } // 
         public string Location { get; set; }
         public string Category { get; set; } // 
@@ -18,7 +19,7 @@ namespace restworkapi.Models.Database
         public string Salary { get; set; } // 
         public string Skills { get; set; } //
         public string Photo { get; set; } //
-        public int Version { get; set; } = 1;
+        public int Version { get; set; } = 0;
 
 
     }

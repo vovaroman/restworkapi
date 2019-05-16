@@ -15,7 +15,7 @@ namespace restworkapi.Connectors
         private IMongoDatabase Db;
 
         public IMongoCollection<Job> jobCollection;
-        public IMongoCollection<CV> cvCollection;
+        public IMongoCollection<CV> resumeCollection;
         public IMongoCollection<Category> categoryCollection;
         public IMongoCollection<User> userCollection;
 
@@ -85,17 +85,17 @@ namespace restworkapi.Connectors
         }
 
 
-        public async Task<bool> InsertNewValue<T>(T item, IMongoCollection<T> collection)
+        public async Task<int> InsertNewValue<T>(T item, IMongoCollection<T> collection)
         {
             try{
 
                 var count = await collection.CountDocumentsAsync(FilterDefinition<T>.Empty);
-                (item as IDatabaseObject).Id = (int)count++;
+                (item as IDatabaseObject).Id = (int)++count;
                 await collection.InsertOneAsync(item);
-                return true;
+                return (int)count;
             }
             catch{
-                return false;
+                return 0;
             }
         }
 
@@ -104,7 +104,7 @@ namespace restworkapi.Connectors
             Mongo = new MongoClient(connectionString);
             Db = Mongo.GetDatabase("restworkapi");
             jobCollection = Db.GetCollection<Job>("Jobs");
-            cvCollection = Db.GetCollection<CV>("CV");
+            resumeCollection = Db.GetCollection<CV>("CV");
             categoryCollection = Db.GetCollection<Category>("Categories");
             userCollection = Db.GetCollection<User>("Users");
         }

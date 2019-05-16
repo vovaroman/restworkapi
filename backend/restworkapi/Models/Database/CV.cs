@@ -18,7 +18,8 @@ namespace restworkapi.Models.Database
         public string Skills { get; set; } //
         public string Phone { get; set; }//
         public string Email { get; set; }//
-        public int Salary { get; set; } //
-        public int Version { get; set; } = 1;
+        public string Salary { get; set; } //
+        public int Version { get; set; } = 0;
+        public int UserId { get; set; } = 0;
     }
 }

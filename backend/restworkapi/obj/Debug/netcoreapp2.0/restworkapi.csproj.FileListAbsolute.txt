@@ -14,9 +14,9 @@
 /Users/vr/Desktop/coursework/backend/restworkapi/bin/Debug/netcoreapp2.0/restworkapi.runtimeconfig.dev.json
 /Users/vr/Desktop/coursework/backend/restworkapi/bin/Debug/netcoreapp2.0/restworkapi.dll
 /Users/vr/Desktop/coursework/backend/restworkapi/bin/Debug/netcoreapp2.0/restworkapi.pdb
-/Users/vr/Desktop/coursework/backend/restworkapi/obj/Debug/netcoreapp2.0/restworkapi.csprojAssemblyReference.cache
 /Users/vr/Desktop/coursework/backend/restworkapi/obj/Debug/netcoreapp2.0/restworkapi.csproj.CoreCompileInputs.cache
 /Users/vr/Desktop/coursework/backend/restworkapi/obj/Debug/netcoreapp2.0/restworkapi.AssemblyInfoInputs.cache
 /Users/vr/Desktop/coursework/backend/restworkapi/obj/Debug/netcoreapp2.0/restworkapi.AssemblyInfo.cs
 /Users/vr/Desktop/coursework/backend/restworkapi/obj/Debug/netcoreapp2.0/restworkapi.dll
 /Users/vr/Desktop/coursework/backend/restworkapi/obj/Debug/netcoreapp2.0/restworkapi.pdb
+/Users/vr/Desktop/coursework/backend/restworkapi/obj/Debug/netcoreapp2.0/restworkapi.csprojAssemblyReference.cache

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using restworkapi.Connectors;
 using restworkapi.Models.Database;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace restworkapi.Controllers
 {
     [Route("api/[controller]")]
@@ -34,16 +36,17 @@ namespace restworkapi.Controllers
 
 
         [HttpPost]
-        public async void Post([FromBody]string value)
+        public async void Post([FromBody] JObject value)
         {
             try
             {
-                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value);
+                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value.ToString());
                 var databaseConnector = DatabaseConnector.GetDatabaseConnector();
                 await databaseConnector.InsertNewValue(new Job()
                 {
                     Category = data["Category"],
                     Date = data["Date"],
+                    Company = data["Company"],
                     Description = data["Description"],
                     Education = data["Education"],
                     Email = data["Email"],
@@ -52,7 +55,7 @@ namespace restworkapi.Controllers
                     Phone = data["Phone"],
                     Salary = data["Salary"],
                     Schedule = data["Schedule"],
-                    Title = data["Title"],
+                    Position = data["Title"],
                     Version = int.Parse(data["Version"]),
                     Photo = data["Photo"],
                     Skills = data["Skills"]
@@ -66,17 +69,18 @@ namespace restworkapi.Controllers
         }
 
         [HttpPatch]
-        public async void Patch([FromBody]string value)
+        public async void Patch([FromBody] JObject value)
         {
             try
             {
-                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value);
+                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value.ToString());
                 var databaseConnector = DatabaseConnector.GetDatabaseConnector();
                 await databaseConnector.ModifyValue(new Job()
                 {
                     Id = int.Parse(data["_id"]),
                     Category = data["Category"],
                     Date = data["Date"],
+                    Company = data["Company"],
                     Description = data["Description"],
                     Education = data["Education"],
                     Email = data["Email"],
@@ -85,7 +89,7 @@ namespace restworkapi.Controllers
                     Phone = data["Phone"],
                     Salary = data["Salary"],
                     Schedule = data["Schedule"],
-                    Title = data["Title"],
+                    Position = data["Title"],
                     Version = int.Parse(data["Version"]),
                     Photo = data["Photo"],
                     Skills = data["Skills"]

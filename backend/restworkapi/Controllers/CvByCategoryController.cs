@@ -20,7 +20,7 @@ namespace restworkapi.Controllers
             var output = new List<string>();
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
             var filter = Builders<CV>.Filter.Eq("Category", category);
-            (await databaseConnector.GetItemsByFilter(filter, databaseConnector.cvCollection)).ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
+            (await databaseConnector.GetItemsByFilter(filter, databaseConnector.resumeCollection)).ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
             return output;
         }
 

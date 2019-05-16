@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using restworkapi.Connectors;
 using restworkapi.Models.Database;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace restworkapi.Controllers
 {
     [Route("api/[controller]")]
@@ -16,7 +18,7 @@ namespace restworkapi.Controllers
         {
             var output = new List<string>();
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
-            var cvs = await databaseConnector.GetAll(databaseConnector.cvCollection);
+            var cvs = await databaseConnector.GetAll(databaseConnector.resumeCollection);
             cvs.ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
             return output;
         }
@@ -27,18 +29,18 @@ namespace restworkapi.Controllers
             var output = string.Empty;
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
             output = JsonConvert.SerializeObject(
-                await databaseConnector.GetItemById(id, databaseConnector.cvCollection)
+                await databaseConnector.GetItemById(id, databaseConnector.resumeCollection)
             );
             return output;
         }
         
 
         [HttpPost]
-        public async void Post([FromBody]string value)
+        public async void Post([FromBody] JObject value)
         {
             try
             {
-                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value);
+                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value.ToString());
                 var databaseConnector = DatabaseConnector.GetDatabaseConnector();
                 await databaseConnector.InsertNewValue(new CV()
                 {
@@ -55,8 +57,9 @@ namespace restworkapi.Controllers
                     Email = data["Email"],
                     Phone = data["Phone"],
                     Position = data["Position"],
-                    Salary = int.Parse(data["Salary"])
-                }, databaseConnector.cvCollection);
+                    Salary = data["Salary"],
+                    UserId = int.Parse(data["UserId"])
+                }, databaseConnector.resumeCollection);
             }
             catch
             {
@@ -66,11 +69,11 @@ namespace restworkapi.Controllers
         }
 
         [HttpPatch]
-        public async void Patch([FromBody]string value)
+        public async void Patch([FromBody] JObject value)
         {
             try
             {
-                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value);
+                IDictionary<string, string> data = JsonConvert.DeserializeObject<IDictionary<string, string>>(value.ToString());
                 var databaseConnector = DatabaseConnector.GetDatabaseConnector();
                 await databaseConnector.ModifyValue(new CV()
                 {
@@ -88,8 +91,8 @@ namespace restworkapi.Controllers
                     Email = data["Email"],
                     Phone = data["Phone"],
                     Position = data["Position"],
-                    Salary = int.Parse(data["Salary"])
-                }, databaseConnector.cvCollection);
+                    Salary = data["Salary"]
+                }, databaseConnector.resumeCollection);
             }
             catch
             {

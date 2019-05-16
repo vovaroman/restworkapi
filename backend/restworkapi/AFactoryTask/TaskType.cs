@@ -4,7 +4,7 @@ namespace restworkapi.AFactoryTask
     public enum TaskType
     {
 		PopulateCategory,
-        PopulateJobs,
-        PopulateCVs
+        PopulateVacancy,
+        PopulateResume
     }
 }
