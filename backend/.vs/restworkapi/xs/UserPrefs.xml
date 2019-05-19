@@ -1,25 +1,26 @@
 ﻿<Properties StartupConfiguration="{D0653F7B-A795-471B-AF8C-54F6607AE22C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="restworkapi/Models/Database/User.cs">
+  <MonoDevelop.Ide.ItemProperties.restworkapi PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="restworkapi/Controllers/InvokeController.cs">
     <Files>
-      <File FileName="restworkapi/Controllers/InvokeController.cs" Line="19" Column="1" />
+      <File FileName="restworkapi/Controllers/InvokeController.cs" Line="39" Column="15" />
       <File FileName="restworkapi/Connectors/DatabaseConnector.cs" Line="41" Column="1" />
       <File FileName="restworkapi/AFactoryTask/PopulateCategory.cs" Line="51" Column="1" />
-      <File FileName="restworkapi/AFactoryTask/Dummy.cs" Line="8" Column="24" />
-      <File FileName="restworkapi/Controllers/CVController.cs" Line="75" Column="127" />
+      <File FileName="restworkapi/AFactoryTask/Dummy.cs" Line="8" Column="1" />
+      <File FileName="restworkapi/Controllers/CVController.cs" Line="70" Column="1" />
       <File FileName="restworkapi/Controllers/ValuesController.cs" Line="24" Column="1" />
       <File FileName="restworkapi/Controllers/JobByCategory.cs" Line="16" Column="10" />
       <File FileName="restworkapi/Controllers/CvByCategoryController.cs" Line="15" Column="6" />
-      <File FileName="restworkapi/WebSpider/WSpider.cs" Line="212" Column="45" />
+      <File FileName="restworkapi/WebSpider/WSpider.cs" Line="215" Column="1" />
       <File FileName="restworkapi/Controllers/CategoryController.cs" Line="12" Column="26" />
       <File FileName="restworkapi/Models/Database/Category.cs" Line="8" Column="41" />
-      <File FileName="restworkapi/WebSpider/Models/Category.cs" Line="11" Column="1" />
+      <File FileName="restworkapi/WebSpider/Models/Category.cs" Line="6" Column="9" />
       <File FileName="restworkapi/Controllers/JobController.cs" Line="80" Column="49" />
       <File FileName="restworkapi/AFactoryTask/TaskType.cs" Line="11" Column="1" />
       <File FileName="restworkapi/AFactoryTask/ITask.cs" Line="8" Column="9" />
-      <File FileName="restworkapi/Models/Database/CV.cs" Line="22" Column="45" />
+      <File FileName="restworkapi/Models/Database/CV.cs" Line="23" Column="45" />
       <File FileName="restworkapi/Models/Database/Job.cs" Line="22" Column="46" />
-      <File FileName="restworkapi/WebSpider/Models/Job.cs" Line="7" Column="43" />
-      <File FileName="restworkapi/Program.cs" Line="66" Column="1" />
+      <File FileName="restworkapi/WebSpider/Models/Job.cs" Line="8" Column="23" />
+      <File FileName="restworkapi/Program.cs" Line="22" Column="1" />
       <File FileName="restworkapi/WebSpider/Sol.cs" Line="7" Column="62" />
       <File FileName="restworkapi/Controllers/UserController.cs" Line="70" Column="127" />
       <File FileName="restworkapi/Models/Database/User.cs" Line="13" Column="1" />
@@ -27,22 +28,31 @@
       <File FileName="restworkapi/appsettings.json" Line="1" Column="1" />
       <File FileName="restworkapi/appsettings.Development.json" Line="1" Column="1" />
       <File FileName="restworkapi/Properties/launchSettings.json" Line="26" Column="42" />
-      <File FileName="restworkapi/AFactoryTask/PopulateVacancy.cs" Line="90" Column="1" />
+      <File FileName="restworkapi/AFactoryTask/PopulateVacancy.cs" Line="50" Column="54" />
       <File FileName="../../../../../usr/local/share/dotnet/sdk/2.1.4/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.DefaultItems.targets" Line="271" Column="30" />
-      <File FileName="restworkapi/WebSpider/Models/CV.cs" Line="18" Column="46" />
+      <File FileName="restworkapi/WebSpider/Models/CV.cs" Line="6" Column="9" />
       <File FileName="restworkapi/Models/Database/CollectionTypes.cs" Line="1" Column="1" />
-      <File FileName="restworkapi/AFactoryTask/PopulateResume.cs" Line="74" Column="28" />
+      <File FileName="restworkapi/AFactoryTask/PopulateResume.cs" Line="57" Column="1" />
       <File FileName="restworkapi/Models/Database/IDatabaseObject.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="restworkapi" expanded="True">
+            <Node name="restworkapi" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="InvokeController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/vr/Desktop/coursework/backend/restworkapi/Controllers/InvokeController.cs" relfile="restworkapi/Controllers/InvokeController.cs" line="35" column="1" />
-      <Breakpoint file="/Users/vr/Desktop/coursework/backend/restworkapi/WebSpider/WSpider.cs" relfile="restworkapi/WebSpider/WSpider.cs" line="221" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.restworkapi PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace restworkapi.Models.Database
+﻿namespace restworkapi.Models.Database
 {
     public class Job : IDatabaseObject
     {

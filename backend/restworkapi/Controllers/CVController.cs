@@ -14,24 +14,28 @@ namespace restworkapi.Controllers
     public class CVController : Controller
     {
         [HttpGet]
-        public async Task<IEnumerable<string>> Get()
+        public async Task<string> Get()
         {
-            var output = new List<string>();
+            var output = new List<CV>();
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
-            var cvs = await databaseConnector.GetAll(databaseConnector.resumeCollection);
-            cvs.ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
-            return output;
+            output = await databaseConnector.GetAll(databaseConnector.resumeCollection);
+            //output.ForEach(x => x.Photo = "empty");
+            var jsonOutput = JsonConvert.SerializeObject(output);
+            return jsonOutput;
         }
 
         [HttpGet("{id}")]
         public async Task<string> Get(int id)
         {
-            var output = string.Empty;
+            //var output = string.Empty;
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
-            output = JsonConvert.SerializeObject(
-                await databaseConnector.GetItemById(id, databaseConnector.resumeCollection)
-            );
-            return output;
+            //output = JsonConvert.SerializeObject(
+            //    await databaseConnector.GetItemById(id, databaseConnector.resumeCollection)
+            //);
+            var output = await databaseConnector.GetItemById(id, databaseConnector.resumeCollection) as CV;
+            var jsonOutput = JsonConvert.SerializeObject(output);
+
+            return jsonOutput;
         }
         
 

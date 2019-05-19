@@ -15,12 +15,13 @@ namespace restworkapi.Controllers
     public class UserController : Controller
     {
         [HttpGet]
-        public async Task<IEnumerable<string>> Get()
+        public async Task<string> Get()
         {
-            var output = new List<string>();
+            var output = new List<User>();
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
-            (await databaseConnector.GetAll(databaseConnector.userCollection)).ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
-            return output;
+            output = await databaseConnector.GetAll(databaseConnector.userCollection);
+            var jsonOutput = JsonConvert.SerializeObject(output);
+            return jsonOutput;
         }
 
 

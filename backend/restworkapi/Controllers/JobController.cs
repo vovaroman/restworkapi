@@ -14,12 +14,15 @@ namespace restworkapi.Controllers
     public class JobController : Controller
     {
         [HttpGet]
-        public async Task<IEnumerable<string>> Get()
+        public async Task<string> Get()
         {
-            var output = new List<string>();
+            var output = new List<Job>();
             var databaseConnector = DatabaseConnector.GetDatabaseConnector();
-            (await databaseConnector.GetAll(databaseConnector.jobCollection)).ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
-            return output;
+            output = await databaseConnector.GetAll(databaseConnector.jobCollection);
+            var jsonOutput = JsonConvert.SerializeObject(output);
+            //(await databaseConnector.GetAll(databaseConnector.jobCollection)).ForEach((obj) => output.Add(JsonConvert.SerializeObject(obj)));
+            //#var jsonOutput = JsonConvert.SerializeObject(output);
+            return jsonOutput;
         }
 
 

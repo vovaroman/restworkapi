@@ -22,6 +22,7 @@ namespace restworkapi.Connectors
         public async Task<List<T>> GetAll<T>(IMongoCollection<T> collection)
         {
             var output = new List<T>();
+            int i = 0;
             try
             {
                 using (IAsyncCursor<T> cursor = await collection.FindAsync(FilterDefinition<T>.Empty))
@@ -32,6 +33,9 @@ namespace restworkapi.Connectors
                         foreach (T item in batch)
                         {
                             output.Add(item);
+                            i++;
+                            if (i == 5)
+                                return output;
                         }
                     }
                 }
