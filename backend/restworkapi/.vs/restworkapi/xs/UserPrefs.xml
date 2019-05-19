@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{2C908AEB-8486-4063-BF6E-BEF47667E782}|Default">
   <MonoDevelop.Ide.ItemProperties.restworkapi PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebSpider/WSpider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/InvokeController.cs">
     <Files>
       <File FileName="Models/Database/Job.cs" Line="12" Column="15" />
       <File FileName="Properties/launchSettings.json" Line="15" Column="32" />
@@ -8,7 +8,7 @@
       <File FileName="Controllers/UserController.cs" Line="26" Column="1" />
       <File FileName="Controllers/CVController.cs" Line="23" Column="4" />
       <File FileName="Models/Database/CV.cs" Line="23" Column="26" />
-      <File FileName="Connectors/DatabaseConnector.cs" Line="37" Column="39" />
+      <File FileName="Connectors/DatabaseConnector.cs" Line="110" Column="56" />
       <File FileName="Controllers/InvokeController.cs" Line="1" Column="1" />
       <File FileName="WebSpider/WSpider.cs" Line="1" Column="1" />
     </Files>
@@ -18,20 +18,17 @@
           <Node name="restworkapi" expanded="True">
             <Node name="restworkapi" expanded="True">
               <Node name="Connectors" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="InvokeController.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True">
                 <Node name="Database" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
-              <Node name="WebSpider" expanded="True">
-                <Node name="WSpider.cs" selected="True" />
-              </Node>
+              <Node name="WebSpider" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

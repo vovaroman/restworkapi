@@ -190,7 +190,7 @@ namespace restworkapi.WebSpider
                     var summary = document.QuerySelector("div.summary");
                     var summaryCols = summary.QuerySelectorAll("div.col");
                     cv.Salary = summaryCols[0].QuerySelectorAll("span")[1].TextContent.Trim();
-                    var photoLink = document.QuerySelector("div#rsm_photo_left").QuerySelector("img").GetAttribute("href");
+                    var photoLink = document.QuerySelector("div#rsm_photo_left").QuerySelector("img").GetAttribute("src");
 
                     cv.Photo = ConvertImageToBASE64FromPath(Sol.RMDLink + photoLink);
                     cv.Category = category;
